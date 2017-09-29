@@ -33,11 +33,12 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //A snackbar is created on the click of the FAB
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
-
+        //information is added to the arraylist
         list.add("Alpha");
         list.add("Beta");
         list.add("Cupcake");
@@ -58,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         adapter adapter = new adapter(MainActivity.this,list);
         RecyclerView.LayoutManager manager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(manager);
+        //recycleView is attached to the adapter and the LinearLayoutManager
         recyclerView.setAdapter(adapter);
 
     }
@@ -65,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
+        //this method inflates the menu
         inflater.inflate(R.menu.menu_main,menu);
         return true;
     }
